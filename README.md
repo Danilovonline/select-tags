@@ -2,6 +2,8 @@
 
 Select-tags plugin for jquery displaying selected SELECT list items in the form of tags.
 
+![Demo select-tags](https://raw.githubusercontent.com/Danilovonline/select-tags/master/demo.png)
+
 ## Usage
 
 Include it in your HTML after importing jQuery, like:
