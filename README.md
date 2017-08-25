@@ -4,6 +4,7 @@ Select-tags plugin for jquery displaying selected SELECT list items in the form 
 
 ![Demo select-tags](https://raw.githubusercontent.com/Danilovonline/select-tags/master/example/demo.gif)
 
+<a href='https://danilovonline.github.io/select-tags/example/'>Live demo</a>
 ## Usage
 
 Include it in your HTML after importing jQuery, like:
