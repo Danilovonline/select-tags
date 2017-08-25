@@ -6,12 +6,11 @@
  * Released under the MIT license
  */
 
-
 (function( $ ) {
     $.fn.selectTags = function( ) {
         $(this).each(function() {
             var select = this;
-            var cont = $("<div class='with-tags-container'></div>")
+            var cont = $("<div class='with-tags-container'></div>");
             cont.insertAfter($(this));
             var redrawTags = function () {
                 cont.text('');
@@ -23,9 +22,9 @@
                                 $(this).hide('fast').remove();
                                 $(select).trigger('selectTags.remove', [$(this).attr('data-key')]);
                             })
-                    )
+                    );
                     $(select).trigger('selectTags.add', [$(this).attr('value')]);
-                })
+                });
             }
             redrawTags();
             $(select).on('change', redrawTags);

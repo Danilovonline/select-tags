@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>select-tags</title>
+
+    <script
+            src="http://code.jquery.com/jquery-3.2.1.slim.min.js"
+            integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g="
+            crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/css/bootstrap-select.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/js/bootstrap-select.min.js"></script>
+
+    <link rel="stylesheet" href="../jquery.select-tags.css">
+
+    <script src="../jquery.select-tags.js"></script>
+
+    <script>
+        $( document ).ready(function() {
+            $('select.select-tags').selectTags();
+            $('select.selectpicker')
+                .on(
+                    'selectTags.remove',
+                    function(e, param) {
+                        $(this).selectpicker('refresh');
+                    });
+        })
+    </script>
+
+    <style type="text/css">
+        .container {
+            margin-top: 20px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Select-tags example</h1>
+        <div>
+            <h2>Native html select</h2>
+            <select class="select-tags form-control" size="10" multiple>
+                <option></option>
+                <option  value="java">Java</option>
+                <option  value="c++">С++</option>
+                <option  value="php" selected>PHP</option>
+                <option  value="python">Python</option>
+                <option  value="css" selected>CSS</option>
+                <option  value="js" selected>JavaScript</option>
+            </select>
+        </div>
+        <hr>
+        <div>
+            <h2>Bootstrap-select</h2>
+            <p>Using <a href="https://silviomoreto.github.io/bootstrap-select/">bootstrap-select</a></p>
+
+            <select class="select-tags selectpicker form-control" multiple data-selected-text-format="count > 0">
+                <option></option>
+                <option  value="java">Java</option>
+                <option  value="c++">С++</option>
+                <option  value="php" selected>PHP</option>
+                <option  value="python">Python</option>
+                <option  value="css" selected>CSS</option>
+                <option  value="js" selected>JavaScript</option>
+            </select>
+        </div>
+    </div>
+</body>
+</html>

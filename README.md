@@ -2,7 +2,7 @@
 
 Select-tags plugin for jquery displaying selected SELECT list items in the form of tags.
 
-![Demo select-tags](https://raw.githubusercontent.com/Danilovonline/select-tags/master/demo.png)
+![Demo select-tags](https://raw.githubusercontent.com/Danilovonline/select-tags/master/example/demo.gif)
 
 ## Usage
 
@@ -10,6 +10,7 @@ Include it in your HTML after importing jQuery, like:
 
 ```html
     <script type="text/JavaScript" src="path/to/jquery.select-tags.js" />
+    <link rel="stylesheet" href="path/to/jquery.select-tags.css">
 ```
 
 Use it like:
